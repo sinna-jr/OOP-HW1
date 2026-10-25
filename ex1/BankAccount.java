@@ -16,7 +16,7 @@ public class BankAccount {
    System.out.println("Error");
   }
  }
- 
+
  public String getAccountNumber() {
   return accountNumber;
  }
@@ -26,7 +26,7 @@ public class BankAccount {
  }
 
  public double getBalance() {
-  return balance;
+  return balance ;
  }
 
  public void setOwnerName(String ownerName) {}
