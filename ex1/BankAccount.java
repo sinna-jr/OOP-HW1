@@ -1,4 +1,4 @@
-public class BankAccount() {
+public class BankAccount {
 
     private final String accountNumber ;
     private String ownerName ;
@@ -49,7 +49,7 @@ public class BankAccount() {
         }
     }
 
-    public void displayAccountinfo() {
+    public void displayAccountInfo() {
         System.out.println("Account Number: " + accountNumber);
         System.out.println("Owner Name: " + ownerName);
         System.out.println("Balance: " + balance);
