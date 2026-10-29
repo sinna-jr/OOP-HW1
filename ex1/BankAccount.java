@@ -23,4 +23,11 @@ public class BankAccount() {
         return balance ;
     }
 
+    public void setOwnerName(String ownerName) {
+        if (ownerName != null && !ownerName.trim().isEmpty()){
+            this.ownerName = ownerName ;
+        }   else {
+            System.out.println("Invalid owner name!");
+        }
+    }
 }
