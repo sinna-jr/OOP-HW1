@@ -1,2 +1,38 @@
-public class FullTimeEmployee {
+public class FullTimeEmployee extends Employee{
+
+    private double bonus;
+    private double medicalAllowance;
+
+    public FullTimeEmployee(String id, String name, double baseSalary,double bonus ,double medicalAllowance) {
+
+        super(id, name, baseSalary);
+        this.bonus = Math.max(bonus,0);
+        this.medicalAllowance = Math.max(medicalAllowance,0);
+    }
+
+    public double getBonus() {
+        return bonus;
+    }
+
+    public void setBonus(double bonus) {
+        if (bonus >= 0) {
+            this.bonus = bonus;
+        }
+    }
+
+    public double getMedicalAllowance() {
+        return medicalAllowance;
+    }
+
+    public void setMedicalAllowance(double medicalAllowance) {
+        if (medicalAllowance >= 0) {
+            this.medicalAllowance = medicalAllowance;
+        }
+    }
+
+    @Override
+    public double calculateSalary() {
+        return getBaseSalary() + bonus + medicalAllowance;
+    }
+
 }
