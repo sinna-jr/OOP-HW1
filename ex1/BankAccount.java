@@ -30,4 +30,20 @@ public class BankAccount() {
             System.out.println("Invalid owner name!");
         }
     }
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }   else {
+                System.out.println("Invalid amount!");
+        }
+    }
+
+    public void withdraw(double amount) {
+        if (amount <= 0) {
+            System.out.println("Invalid amount!");
+        } else {
+            balance -= amount;
+        }
+    }
 }
