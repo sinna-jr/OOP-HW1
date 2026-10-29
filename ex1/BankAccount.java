@@ -46,6 +46,7 @@ public class BankAccount {
                 System.out.println("amount is not enough!");
         }   else {
             balance -= amount;
+            System.out.println("Withdrawn Successfully!");
         }
     }
 
