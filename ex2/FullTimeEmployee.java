@@ -34,5 +34,4 @@ public class FullTimeEmployee extends Employee{
     public double calculateSalary() {
         return getBaseSalary() + bonus + medicalAllowance;
     }
-
 }
