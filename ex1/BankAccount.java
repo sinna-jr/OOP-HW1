@@ -42,8 +42,16 @@ public class BankAccount() {
     public void withdraw(double amount) {
         if (amount <= 0) {
             System.out.println("Invalid amount!");
-        } else {
+        }   else if (amount > balance) {
+                System.out.println("amount is not enough!");
+        }   else {
             balance -= amount;
         }
+    }
+
+    public void displayAccountinfo() {
+        System.out.println("Account Number: " + accountNumber);
+        System.out.println("Owner Name: " + ownerName);
+        System.out.println("Balance: " + balance);
     }
 }
