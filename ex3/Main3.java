@@ -1,21 +1,36 @@
+
 public class Main3 {
+
     public static void main(String[] args) {
 
-        Vehicle v1 = new Vehicle("123", "Toyota", 50);
-        v1.displayDetails();
-        System.out.println();
+        RentalAgency agency = new RentalAgency("City Wheels");
 
-        System.out.println("Rental Cost: $" + v1.calculateRentalCost(3));
+        Car car = new Car("ABC-123", "Toyota Camry", 50, 5);
 
-        v1.rentVehicle();
-        System.out.println();
+        Motorcycle motorcycle = new Motorcycle(
+                "XYZ-456", "Yamaha MT-07", 30, true
+        );
 
-        v1.displayDetails();
+        agency.addVehicle(car);
+        agency.addVehicle(motorcycle);
 
-        v1.returnVehicle();
-        System.out.println();
+        agency.displayAvailableVehicles();
 
-        v1.displayDetails();
+        System.out.println("----------------------");
+
+        agency.rentVehicle("ABC-123", 3);
+
+        System.out.println("----------------------");
+
+        agency.rentVehicle("ABC-123", 3);
+
+        System.out.println("----------------------");
+
+        agency.returnVehicle("ABC-123");
+
+        System.out.println("----------------------");
+
+        agency.displayAvailableVehicles();
 
     }
 }

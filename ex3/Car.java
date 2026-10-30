@@ -1,4 +1,7 @@
 public class Car extends Vehicle {
+
+    private int numberOfSeats;
+
     public Car(String licensePlate, String model, double dailyRate, int numberOfSeats){
         super(licensePlate, model, dailyRate);
         this.numberOfSeats = Math.max(numberOfSeats, 0);
